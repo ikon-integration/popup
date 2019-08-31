@@ -101,7 +101,8 @@ function Popup (src, opts) {
   this.optsStr = optsStr;
 
   // finally, open and return the popup window
-  this.window = window.open(src, name, optsStr);
+  if (name == '_blank') this.window = window.open(src, name);
+  else this.window = window.open(src, name, optsStr);
   this.focus();
 
   this.interval = setInterval(checkClose(this), interval);
