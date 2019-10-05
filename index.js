@@ -99,6 +99,7 @@ function Popup (src, opts) {
   this.name = name;
   this.opts = opts;
   this.optsStr = optsStr;
+  this.url = src;
 
   // finally, open and return the popup window
   if (name == '_blank') this.window = window.open(src, name);
